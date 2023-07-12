@@ -40,7 +40,7 @@ char GetOperator()
 void PrintHint(decimal result)
 {
     Console.WriteLine($"Result is: {result}");
-}
+    }
 void DoCalculation(char oper, int firstDigit, int secondDigit)
 {
     decimal result = 0M;
@@ -48,9 +48,13 @@ void DoCalculation(char oper, int firstDigit, int secondDigit)
     {
         case '+':
             result = firstDigit + secondDigit;
+            Console.WriteLine($"Result is: {result}");
             break;
+
         case '-':
             result = firstDigit - secondDigit;
+            Console.WriteLine($"Result is: {result}");
+            break;
 
             break;
         case '/':
@@ -62,10 +66,14 @@ void DoCalculation(char oper, int firstDigit, int secondDigit)
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
-                break;
+            break;
             }
         case '*':
             result = firstDigit * secondDigit;
+            break;
+
+        default:
+            Console.WriteLine($"Insert correct operator +,-,*,/.");
             break;
     }
     PrintHint(result);
