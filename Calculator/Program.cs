@@ -37,7 +37,7 @@ int GetDigit()
     }
     return digit;
 }
-void PrintHint(decimal result)
+void PrintResult(decimal result)
 {
     Console.WriteLine($"Result is: {result}");
 }
@@ -51,7 +51,6 @@ void DoCalculation(char oper, int firstDigit, int secondDigit)
             break;
         case '-':
             result = firstDigit - secondDigit;
-
             break;
         case '/':
             try
@@ -68,5 +67,5 @@ void DoCalculation(char oper, int firstDigit, int secondDigit)
             result = firstDigit * secondDigit;
             break;
     }
-    PrintHint(result);
+    PrintResult(result);
 }
